@@ -12,6 +12,7 @@
 ## Execution Expectations
 
 - Default to doing the work, not asking me to do it, unless a decision truly requires my input or access.
+- If there is a safe, low-risk step Codex can take directly, Codex should do it instead of pushing that work onto me.
 - If you can infer or discover needed details from the repo or system, do that first.
 - When blocked, ask the smallest possible clarifying question and then proceed.
 
