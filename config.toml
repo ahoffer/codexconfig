@@ -1,0 +1,46 @@
+personality = "pragmatic"
+model = "gpt-5.3-codex"
+[projects."/projects/aitr_util_setup"]
+trust_level = "trusted"
+
+[projects."/projects/cx-search"]
+trust_level = "trusted"
+
+[projects."/builds/cx-search"]
+trust_level = "trusted"
+
+[projects."/home/aaron/bin"]
+trust_level = "trusted"
+
+[projects."/projects/autostream"]
+trust_level = "trusted"
+
+[projects."/projects/marrs"]
+trust_level = "trusted"
+
+[projects."/deploy/marrs-distribution-1.17.0-SNAPSHOT"]
+trust_level = "untrusted"
+
+[projects."/home/aaron/.claude"]
+trust_level = "trusted"
+
+[projects."/projects/aiagent"]
+trust_level = "trusted"
+
+[projects."/home/aaron"]
+trust_level = "trusted"
+
+[projects."/projects/aiforge"]
+trust_level = "trusted"
+
+[projects."/home/aaron/.codex"]
+trust_level = "trusted"
+
+[features]
+unified_exec = true
+shell_snapshot = true
+multi_agent = true
+steer = true
+
+[notice.model_migrations]
+"gpt-5.2-codex" = "gpt-5.3-codex"

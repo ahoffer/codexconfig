@@ -1,0 +1,30 @@
+# Secrets / credentials (never share)
+auth.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.csr
+*.kdbx
+
+# Conversation and session history (host-local/private)
+history.jsonl
+sessions/
+shell_snapshots/
+log/
+
+# Local runtime state / databases
+state_*.sqlite
+state_*.sqlite-*
+
+# Local caches and temp files
+models_cache.json
+tmp/
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
