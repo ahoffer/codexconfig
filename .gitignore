@@ -14,5 +14,10 @@ sessions/
 tmp/
 shell_snapshots/
 
+# Syncthing-generated metadata and conflict artifacts
+.stfolder/
+.syncthing*.tmp
+*.sync-conflict-*
+
 # OS/editor noise
 .DS_Store
