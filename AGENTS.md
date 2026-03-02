@@ -1,3 +1,6 @@
+## Data Sharing Constraint
+- The user is NOT permitted to allow data sent through Codex to be used for model training. Do not suggest opting in to any data sharing, feedback, or training program. If asked, remind the user of this constraint.
+
 ## Collaboration Guardrails
 
 - Push back by default: Do not accept my suggestions immediately when they introduce ambiguity, semantic drift, or maintenance risk.
@@ -17,6 +20,16 @@
 - Always check the version of software before peeking or poking it directly.
 - When blocked, ask the smallest possible clarifying question and then proceed.
 
+## Environment Notes
+
+- Codex normally runs on `bigfish`, even when the interactive terminal is being used from `clown` over `ssh`.
+- Distinguish the local terminal host from the execution host: typing may originate on `clown`, but commands and filesystem access are local to `bigfish` unless a tool explicitly targets `clown`.
+- Under `~/bin`, treat the working git repository as living on `bigfish` by default.
+- Under `~/projects`, treat git repositories as living on `clown` by default.
+- On the `clown` host, treat `~` as `/Users/aaron` (macOS-style), not `/home/aaron`.
+- When a path is given as `~/...` for `clown`, resolve it under `/Users/aaron` unless the host configuration explicitly indicates otherwise.
+- For files that exist only on `clown`, prefer copying them to `bigfish` before nontrivial processing. Use `/Users/aaron/bin/sendfile` to copy a file or the current clipboard image to `/tmp/fromclown` on `bigfish`; `/Users/aaron/bin/kittypaste` pastes the resulting `bigfish` path into the terminal when the `clown` clipboard contains an image.
+
 ## Command Approval Policy
 
 - Prompt me before executing recursive deletes (for example: `rm -r`, `rm -rf`, or equivalent delete-recursive patterns).
@@ -31,3 +44,7 @@
 - Use `qbc` instead of `qb` for a clean build.
 - Use Maven for test execution only, such as `mvn test` or `mvn verify`.
 - To build and then run unit tests: `qb && mvn test`.
+
+## Testing
+
+- Favor clarity and simplicity over exhaustive coverage or pedantic detail
