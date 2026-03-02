@@ -24,6 +24,7 @@
 
 - Codex normally runs on `bigfish`, even when the interactive terminal is being used from `clown` over `ssh`.
 - Distinguish the local terminal host from the execution host: typing may originate on `clown`, but commands and filesystem access are local to `bigfish` unless a tool explicitly targets `clown`.
+- On bigfish, `~/.claude` is the source of truth and git repo for Claude config, and `~/.codex` is the source of truth and git repo for Codex config.
 - Under `~/bin`, treat the working git repository as living on `bigfish` by default.
 - Under `~/projects`, treat git repositories as living on `clown` by default.
 - On the `clown` host, treat `~` as `/Users/aaron` (macOS-style), not `/home/aaron`.
