@@ -1,5 +1,9 @@
 approval_policy = "on-request"
 sandbox_mode = "danger-full-access"
+collaboration_mode_kind = "plan"
+
+[features]
+collaboration_modes = true
 
 [analytics]
 enabled = false

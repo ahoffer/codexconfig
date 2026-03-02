@@ -16,9 +16,11 @@ Push back on changes that introduce ambiguity, semantic drift, or maintenance ri
 ## Environment Notes
 
 - bigfish is the execution host even when the interactive terminal is on clown over ssh.
+- NEVER install claude or codex on clown.
 - On bigfish, `~/.claude` and `~/.codex` are the git repos for Claude and Codex config.
 - `~/bin` git repo lives on bigfish. `~/projects` git repos live on clown.
 - On clown, `~` resolves to `/Users/aaron`.
+- For GitLab access, use `~/bin/gl`. Run `gl doctor` first when you need to verify local GitLab helper readiness. Use `gl api ...` for GitLab API reads, `gl git ro ...` for read-only Git transport, and `gl git rw ...` only for explicit write flows. `gl api` and `gl git ro` use `GITLAB_BOT_READ_TOKEN`. `gl git rw` uses `GITLAB_WRITE_TOKEN`.
 
 ## Command Approval Policy
 

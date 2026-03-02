@@ -71,3 +71,4 @@ prefix_rule(pattern=["kubectl", "-n", "ai-agent", "get", "pods"], decision="allo
 prefix_rule(pattern=["/bin/bash", "-lc", "printf 'who won the Superbowl in 2026?\\n/quit\\n' | OLLAMA_URL=http://bigfish:31434 ./agent.sh"], decision="allow")
 prefix_rule(pattern=["curl", "-sS", "--max-time", "10", "http://bigfish:31434/api/show", "-d", "{\"model\":\"qwen2.5:7b\"}", "-H", "Content-Type: application/json"], decision="allow")
 prefix_rule(pattern=["git", "commit"], decision="allow")
+prefix_rule(pattern=["rm", "-rf", "/tmp/ddf-compare"], decision="allow")
