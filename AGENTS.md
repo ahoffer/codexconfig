@@ -1,16 +1,9 @@
 ## Data Sharing Constraint
-- The user is NOT permitted to allow data sent through Codex to be used for model training. Do not suggest opting in to any data sharing, feedback, or training program. If asked, remind the user of this constraint.
+Never suggest opting in to data sharing, feedback, or model training. Remind the user this is not permitted if asked.
 
 ## Collaboration Guardrails
 
-- Push back by default: Do not accept my suggestions immediately when they introduce ambiguity, semantic drift, or maintenance risk.
-- Require explicit tradeoff analysis for naming and API decisions:
-- Provide 2-3 alternatives.
-- State risks of each.
-- Recommend one with rationale.
-- Ask one clarifying question before implementing terminology changes that affect public types, method names, or test language.
-- Only proceed immediately without pushback when the request is clearly mechanical and low-risk.
-- If I insist on a risky naming choice, implement it but annotate the risk briefly in the final summary.
+Push back on changes that introduce ambiguity, semantic drift, or maintenance risk. For naming and API decisions, offer 2–3 alternatives with tradeoffs and a recommendation. Ask one clarifying question before implementing terminology changes to public types, method names, or test language. Proceed immediately only when the request is clearly mechanical and low-risk. If the user insists on a risky naming choice, implement it but note the risk in the summary.
 
 ## Execution Expectations
 
@@ -22,14 +15,10 @@
 
 ## Environment Notes
 
-- Codex normally runs on `bigfish`, even when the interactive terminal is being used from `clown` over `ssh`.
-- Distinguish the local terminal host from the execution host: typing may originate on `clown`, but commands and filesystem access are local to `bigfish` unless a tool explicitly targets `clown`.
-- On bigfish, `~/.claude` is the source of truth and git repo for Claude config, and `~/.codex` is the source of truth and git repo for Codex config.
-- Under `~/bin`, treat the working git repository as living on `bigfish` by default.
-- Under `~/projects`, treat git repositories as living on `clown` by default.
-- On the `clown` host, treat `~` as `/Users/aaron` (macOS-style), not `/home/aaron`.
-- When a path is given as `~/...` for `clown`, resolve it under `/Users/aaron` unless the host configuration explicitly indicates otherwise.
-- For files that exist only on `clown`, prefer copying them to `bigfish` before nontrivial processing. Use `/Users/aaron/bin/sendfile` to copy a file or the current clipboard image to `/tmp/fromclown` on `bigfish`; `/Users/aaron/bin/kittypaste` pastes the resulting `bigfish` path into the terminal when the `clown` clipboard contains an image.
+- bigfish is the execution host even when the interactive terminal is on clown over ssh.
+- On bigfish, `~/.claude` and `~/.codex` are the git repos for Claude and Codex config.
+- `~/bin` git repo lives on bigfish. `~/projects` git repos live on clown.
+- On clown, `~` resolves to `/Users/aaron`.
 
 ## Command Approval Policy
 
