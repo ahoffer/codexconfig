@@ -1,8 +1,24 @@
 approval_policy = "on-request"
 sandbox_mode = "danger-full-access"
 
+[analytics]
+enabled = false
+
+[feedback]
+enabled = false
+
+[otel]
+exporter = "none"
+log_user_prompt = false
+
 [projects."/Users/aaron"]
 trust_level = "trusted"
 
 [projects."/Users/aaron/projects"]
 trust_level = "trusted"
+
+[mcp_servers.clown]
+command = "ssh"
+args = ["clown-mcp", "mcpserve"]
+startup_timeout_sec = 15
+tool_timeout_sec = 120

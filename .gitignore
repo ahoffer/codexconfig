@@ -19,5 +19,7 @@ shell_snapshots/
 .syncthing*.tmp
 *.sync-conflict-*
 
+# Local Playwright CLI install
+/playwright/
 # OS/editor noise
 .DS_Store
