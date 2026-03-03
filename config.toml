@@ -21,14 +21,14 @@ trust_level = "trusted"
 [projects."/Users/aaron/projects"]
 trust_level = "trusted"
 
-[mcp_servers.clown]
+[mcp_servers.desktop-commander]
 command = "ssh"
 args = ["clown-mcp", "mcpserve"]
 startup_timeout_sec = 15
 tool_timeout_sec = 120
 
-[mcp_servers.clown-files]
+[mcp_servers.ssh-mcp]
 command = "ssh-mcp"
-args = ["--host", "clown", "--user", "aaron", "--disableSudo"]
+args = ["--host=clown", "--user=aaron", "--disableSudo"]
 startup_timeout_sec = 30
 tool_timeout_sec = 120
