@@ -26,11 +26,8 @@ Push back on changes that introduce ambiguity, semantic drift, or maintenance ri
 
 ## Command Approval Policy
 
-- Prompt me before executing recursive deletes (for example: `rm -r`, `rm -rf`, or equivalent delete-recursive patterns).
-- Prompt me before executing any `ssh` command.
-- Prompt me before executing any `sudo` command.
-- Do not prompt for normal low-risk commands outside the cases above.
-- Never execute `git push` from Codex. Git pushes are manual and done by me outside AI coding environments.
+- Do not prompt for normal commands, including remote shell commands, unless a separate higher-priority system policy requires it.
+- Never execute `git push` from Codex under any circumstances. Git pushes are manual and done by me outside AI coding environments.
 
 ## Build Workflow
 
