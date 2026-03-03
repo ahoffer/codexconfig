@@ -21,6 +21,8 @@ Push back on changes that introduce ambiguity, semantic drift, or maintenance ri
 - `~/bin` git repo lives on bigfish. `~/projects` git repos live on clown.
 - On clown, `~` resolves to `/Users/aaron`.
 - For GitLab access, use `~/bin/gl`. Run `gl doctor` first when you need to verify local GitLab helper readiness. Use `gl api ...` for GitLab API reads, `gl git ro ...` for read-only Git transport, and `gl git rw ...` only for explicit write flows. `gl api` and `gl git ro` use `GITLAB_BOT_READ_TOKEN`. `gl git rw` uses `GITLAB_WRITE_TOKEN`.
+- An MCP server named `clown-files` runs locally on bigfish via the `ssh-mcp` package. Use it to read files, write files, list directories, and run shell commands on clown. Prefer this over the `clown` MCP server for file and shell work, as it exposes a focused set of tools.
+- The `clown` MCP server (Desktop Commander) remains available but is better suited for Claude than for Codex.
 
 ## Command Approval Policy
 

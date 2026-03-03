@@ -26,3 +26,9 @@ command = "ssh"
 args = ["clown-mcp", "mcpserve"]
 startup_timeout_sec = 15
 tool_timeout_sec = 120
+
+[mcp_servers.clown-files]
+command = "ssh-mcp"
+args = ["--host", "clown", "--user", "aaron", "--disableSudo"]
+startup_timeout_sec = 30
+tool_timeout_sec = 120
