@@ -9,6 +9,7 @@ state_*.sqlite-wal
 
 # Generated caches/logs
 models_cache.json
+version.json
 log/
 sessions/
 tmp/
