@@ -1,3 +1,12 @@
+## Canonical Repo Rule
+
+Before any Git inspection or Git command, determine the canonical host/path for the repository.
+
+- Paths under `~/projects` on bigfish are not canonical Git checkouts.
+- For repositories under `~/projects`, do Git inspection on clown unless this file explicitly says otherwise.
+- If the local path on bigfish looks like a mirror or snapshot, do not trust `.git`, `git status`, or branch metadata there.
+- When in doubt, inspect the corresponding path on clown first.
+
 ## Data Sharing Constraint
 Never suggest opting in to data sharing, feedback, or model training. Remind the user this is not permitted if asked.
 
@@ -43,3 +52,4 @@ Push back on changes that introduce ambiguity, semantic drift, or maintenance ri
 
 - Favor clarity and simplicity over exhaustive coverage or pedantic detail
 
+For wiki testing, online verification requires pushing to the test-wiki remote's main branch. Codex must not push, but should explicitly prepare changes for a manual push to test-wiki main.
