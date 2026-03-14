@@ -3,13 +3,17 @@ auth.json
 
 # Local runtime history/state
 history.jsonl
+.personality_migration
+version.json
 state_*.sqlite
 state_*.sqlite-shm
 state_*.sqlite-wal
+logs_*.sqlite
+logs_*.sqlite-shm
+logs_*.sqlite-wal
 
 # Generated caches/logs
 models_cache.json
-version.json
 log/
 sessions/
 tmp/

@@ -28,13 +28,7 @@ trust_level = "trusted"
 [projects."/home/aaron"]
 trust_level = "trusted"
 
-[projects."/home/aaron/projects/cx-search.wiki"]
-trust_level = "trusted"
-
-[projects."/home/aaron/projects"]
-trust_level = "trusted"
-
-[projects."/home/aaron/projects/marrs/164-update-marrs-poams-march-2026"]
+[projects."/home/aaron/.codex"]
 trust_level = "trusted"
 
 [mcp_servers.desktop-commander]
